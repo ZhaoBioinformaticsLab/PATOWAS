@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vc_anal" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/vc_anal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="-k ../Data_In_Out -p ../Data_In_Out/phe_trim.csv -o ../Data_In_Out/VC_Anal_Result.txt -i 210" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-DARMA_USE_BLAS" />
+					<Add option="-DARMA_USE_LAPACK" />
+					<Add option="-DARMA_DONT_USE_WRAPPER" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-lblas" />
+					<Add option="-llapack" />
+					<Add option="-lgfortran" />
+					<Add library="../LINPACK_Fortran/liblinpack.a" />
+					<Add directory="../LINPACK_Fortran" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/vc_anal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="-k ../Data_In_Out -p ../Data_In_Out/phe_trim.csv -o ../Data_In_Out/VC_Anal_Result.txt -i 210" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DARMA_USE_BLAS" />
+					<Add option="-DARMA_USE_LAPACK" />
+					<Add option="-DARMA_DONT_USE_WRAPPER" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lblas" />
+					<Add option="-llapack" />
+					<Add option="-lgfortran" />
+					<Add library="../LINPACK_Fortran/liblinpack.a" />
+					<Add directory="../LINPACK_Fortran" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O3" />
+			<Add option="-Wall" />
+			<Add option="-m64" />
+			<Add option="-fexceptions" />
+			<Add directory="../include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add option="-DARMA_USE_BLAS" />
+			<Add option="-DARMA_USE_LAPACK" />
+			<Add option="-DARMA_DONT_USE_WRAPPER" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-m64" />
+			<Add library="../LINPACK_Fortran/liblinpack.a" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

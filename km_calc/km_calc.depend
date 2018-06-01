@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1466720563 source:/root/Desktop/PATOWAS (Pipeline for Analysis of Trait by Omics Wide Association Studies)/km_calc/km_calc/main.cpp
+	<iostream>
+	<stdio.h>
+	<iostream>
+	<fstream>
+	<string>
+	<numeric>
+	<vector>
+	<algorithm>
+	<sstream>
+	<map>
+	<functional>
+
+1470842195 source:/root/Desktop/PATOWAS (Pipeline for Analysis of Trait by Omics Wide Association Studies)/km_calc/main.cpp
+	<iostream>
+	<stdio.h>
+	<iostream>
+	<fstream>
+	<string>
+	<numeric>
+	<vector>
+	<algorithm>
+	<sstream>
+	<map>
+	<functional>
+
